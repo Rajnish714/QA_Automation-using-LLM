@@ -1,17 +1,14 @@
-# Dependencies & Packages
+# Packages and Dependencies
 node_modules/
-jspm_packages/
-web_modules/
+dist/
+artifacts/
 
-# Python Virtual Environments (if applicable)
-venv/
-.venv/
-env/
-
-# Environment Variables & Secrets
+# Environment and Secrets
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 *.env
+*.json
+!package.json
+!turbo.json
+
+# System Files
+nul
