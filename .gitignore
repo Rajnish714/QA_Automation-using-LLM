@@ -1,0 +1,17 @@
+# Dependencies & Packages
+node_modules/
+jspm_packages/
+web_modules/
+
+# Python Virtual Environments (if applicable)
+venv/
+.venv/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
