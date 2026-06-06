@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visual Runner Test Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background: #f4f4f8; color: #333; }
+    .slot-ui { width: 600px; margin: 0 auto; border: 1px solid #ccc; background: #fff; padding: 24px; border-radius: 12px; }
+    .balance { font-size: 1.5rem; margin-bottom: 20px; }
+    .controls { display: flex; gap: 16px; }
+    button { padding: 14px 24px; font-size: 1rem; border-radius: 8px; border: none; cursor: pointer; }
+    .spin-button { background: #1f7af9; color: white; }
+    .bet-button { background: #f39c12; color: white; }
+  </style>
+</head>
+<body>
+  <div class="slot-ui">
+    <div class="balance" aria-label="balance">Balance: $1,250.00</div>
+    <div class="controls">
+      <button class="bet-button">Bet</button>
+      <button class="spin-button">Spin</button>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.spin-button').addEventListener('click', () => {
+      document.querySelector('.balance').textContent = 'Balance: $1,245.00';
+    });
+    document.querySelector('.bet-button').addEventListener('click', () => {
+      document.querySelector('.balance').textContent = 'Balance: $1,230.00';
+    });
+  </script>
+</body>
+</html>

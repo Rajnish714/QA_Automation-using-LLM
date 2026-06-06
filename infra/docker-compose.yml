@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  api:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ../apps/api:/app:cached
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/reelspect
+    command: sh -c "npm install && npm run dev"
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: reelspect
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
